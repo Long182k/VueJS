@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue JS Template</title>
+	<script src='link\vue.js'></script>
+</head>
+	<div id="obj">
+		<p v-html="testMaHTML"> </p>
+		<p v-once> {{content}} - {{  showPost()  }}</p>
+		<a v-bind:href="link">My Fa^y Puk</a>
+<!-- v-once: using only 1 time of attribute after declared by function -> attribute content will dont change and perform the first content!!!    --> 
+	</div>
+
+	<script>
+		// Tat ca du lieu truyen qua HTML deu` la` du~ lieu tho^ (text)//
+		new Vue({
+			el:'#obj',
+			data: {
+				content:'Hello may pannnnnnnnnn!!!',
+				link:'https://www.facebook.com/thanhlong182k/',
+				testMaHTML: '<a href="https://www.facebook.com/thanhlong182k/ ">Get Password</a>',
+			},
+			methods: {
+				sayHello: function() {
+					document.write("Say Helloooooo!!!");
+				},
+				showPost: function() {
+					this.content='Noi dung vua cap nhat!';
+					return this.content;
+				}
+			}
+		});
+	</script>
+
+</html>

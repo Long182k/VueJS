@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue JS Template</title>
+	<script src="link\vue.js"></script>
+</head>
+	<div id="obj">
+		<div v-on:mouseover="ComputeCoordinates">
+			<h1> Press a button to boost value !!! </h1>
+			<button v-on:click="addValue">Press here !!!</button>
+			<p> Zalue: {{count}}   </p>
+			<p> A Mouse Coordinates: ({{ x }} / {{ y }}) </p>
+		</div>	
+	</div>
+
+
+<script>
+	new Vue({
+		el:'#obj',
+		data: {
+				count: 0,
+				x:0,
+				y:0
+		},
+
+		methods:{
+			addValue: function(){
+				this.count++;
+			},
+			ComputeCoordinates: function(event){
+				this.x = event.clientX;
+				this.y = event.clientY;
+			}
+		}
+	});
+</script>
+</html>

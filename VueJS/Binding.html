@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue JS Template</title>
+	<script src='link\vue.js'></script>
+</head>
+	<div id="obj">
+		<p> {{  showPost()  }}</p>
+		<a v-bind:href="link">My Fa^y Puk</a>
+<!-- Vue.js work with HTML'tag
+Does not work with attribute of HTML'tagggg -> Using v-bind to work with Vue.js -->		
+	</div>
+
+	<script>
+		new Vue({
+			el:'#obj',
+			data: {
+				content:'Hello may pannnnnnnnnn!!!',
+				link:'https://www.facebook.com/thanhlong182k/',
+			},
+			methods: {
+				sayHello: function() {
+					document.write("Say Helloooooo!!!");
+				},
+				showPost: function() {
+					return this.title;
+				}
+			}
+		});
+	</script>
+
+</html>

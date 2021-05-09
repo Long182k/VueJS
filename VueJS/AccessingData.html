@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Vue JS Template</title>
+	<script src="link\vue.js"></script>
+</head>
+	<div id="obj">
+		<p> {{ showPost() }}  </p>
+	</div>
+
+
+	<script >
+		new Vue({
+			el:'#obj',
+			data: {
+				content:'Chao cac ban da xem video cua toy',
+				title:'Bla bla bla bla bla ',
+				body:'Thich gi nhoc solo ko ? ',
+			},
+			methods: {
+				sayHello: function() {
+					document.write("Say Helo");
+				},
+				showPost: function(){
+					return this.title;
+				}
+			}
+		});
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
